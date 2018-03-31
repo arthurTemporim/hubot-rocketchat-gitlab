@@ -33,3 +33,6 @@ bin
 pm2.json
 
 .DS_Store
+
+# Ignore chat directory
+chat/

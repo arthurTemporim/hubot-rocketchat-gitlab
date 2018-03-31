@@ -16,6 +16,40 @@ Integrates Rocket.Chat with Gitlab instances
 * GITLAB_URL: required (default: https://gitlab.com)
 * GITLAB_TOKEN: required
 
+## Configuration
+
+* **Database**
+
+Configure your database or link with a container. In the compose file have an example of mongo, if you want just uncomment it.
+
+* **Rocketchat**
+
+Set your Rocketchat configuration or uncomment the configuration in the compose file.
+
+* **hubot-gitlab**
+
+This is the core of this application.
+
+1. Set the link to your rocketchat container if needed.
+
+2. Update `ROCKETCHAT_URL` env variable.
+
+3. Set your bot password in `ROCKETCHAT_PASSWORD`.
+
+4. Generate a token in gitlab and set it in `GITLAB_TOKEN`.
+
+* **Bot**
+
+1. Create the user of the bot same data you have setted.
+
+2. Edit the user role to bot.
+
+3. Restart the service.
+
+4. Test with `bot_name ping`.
+
+5. Have fun.
+
 ## Warning
 
 Since this uses gitlab api, using a token, the same permissions are applied to the owner of that token.

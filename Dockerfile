@@ -2,7 +2,7 @@ FROM node:alpine
 
 LABEL mantainer "Diego Dorgam <diego.dorgam@rocket.chat>"
 
-ENV RESPOND_TO_LIVECHAT=true LISTEN_ON_ALL_PUBLIC=true RESPOND_TO_DM=true RESPOND_TO_EDITED=true HUBOT_ADAPTER=rocketchat HUBOT_OWNER=RocketChat HUBOT_NAME=Gitlab HUBOT_DESCRIPTION="bot for gitlab operations" ROCKETCHAT_URL=http://rocketchat:3000 ROCKETCHAT_ROOM=general RESPOND_TO_DM=true ROCKETCHAT_USER=gitlab ROCKETCHAT_PASSWORD=12345 ROCKETCHAT_AUTH=password HUBOT_LOG_LEVEL=debug GITLAB_URL="https://gitlab.com"
+ENV LISTEN_ON_ALL_PUBLIC=true RESPOND_TO_EDITED=true HUBOT_OWNER=RocketChat RESPOND_TO_DM=true HUBOT_LOG_LEVEL=debug 
 
 RUN apk --update add --no-cache git && \
     npm install -g coffee-script hubot yo generator-hubot && \
